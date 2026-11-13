@@ -96,7 +96,11 @@ button,input,select,textarea{font:inherit}button{cursor:pointer;border:0;border-
  </main>
 </div>
 <script>
-const MAX_RISK=0.65, MAX_TRADES=3, MAX_DAILY_RISK=1.95;
+const ACCOUNT_BALANCE=5000;
+const FIXED_RISK_DOLLARS=30;
+const MAX_RISK=0.60;
+const MAX_TRADES=3;
+const MAX_DAILY_RISK=1.80;
 let supabaseClient=null, trades=[], reviews=[];
 const $=id=>document.getElementById(id);
 function msg(id,t,err=false){$(id).textContent=t;$(id).className=err?'notice error':'notice'}
